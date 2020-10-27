@@ -4,21 +4,17 @@
      */
 
     class Personnage {
-        public string $nom;
-        public int $vie;
-        public int $degat;
-        public string $famille;
-
+        const MAXVIE = 50;
         
+        public string $nom;
+        public int $vie = SELF::MAXVIE;
+        public int $degat = 0 ;
+        public string $famille = "homme";
 
-        const MAXVIE = 300; 
-
-        public function __construct(string $nom, int $vie, int $degat, string $famille)
+        public function __construct(string $nom)
         {
             $this-> nom = $nom;
-            $this-> vie = $vie;
-            $this-> degat = $degat;
-            $this-> famille = $famille;
+            
         }
         
         public function regen(int $soin)
