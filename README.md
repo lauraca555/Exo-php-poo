@@ -1,3 +1,40 @@
+# Exercice : Suite Classe Personnage
+
+## Préambule
+
+Dans cette suite d'exo je vous propose  :
+
+### 2ième Etape
+
+*1 - Crée une ou plusieurs class `Guerrier/Voleur/Archer ...` qui Hérite de la class `Personnage` Changer les points de VIE et la FORCE en fonction des `Role`*
+
+*2 - Crée une base de donnée personnage et une table personnage*
+
+*3 - Inserer un Personnage dans la base de donnée qui est si-dessousn, directement dans la base de donnée via PHPMYADMIN entré le nom etc..*
+
+*4 - Crée une méthode qui va nous afficher notre class Personnage grace à base de donnée (utiliser un SELECT pour Afficher)*
+
+*5 - Instancier 2 object avec les 2 class qui herite de Personnage exemple : Voleur / Guerrier*
+
+*ATTENTION - Libre de faire comme bon vous sembles !*
+--- 
+## Base de données
+
+`Personnage`
+
+| Colonne   | Type  | Description                   | 
+|---------- |-------|-------------------------------|
+| **id**    | AI    | clé primaire                  |
+| personnage| text  | nom du Personnage             |
+| arme      | text  | arme du joueur                |
+| class     | text  | Archer / Voleur / Guerrier    |
+|  vie      | float | point de vie                  |
+|  degat    | int   | force du personnage           |
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Exo-php-poo
 Practique du php poo.
 
