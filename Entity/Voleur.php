@@ -1,11 +1,6 @@
-<?php class Voleur extends Personnage 
+<?php class Voleur
 {
-    public int $vie = 100;
     public string $famille = "Voleur";
-
-    public function regen(int $soin)
-        {
-            parent::regen($soin);
-                
-            } 
+    public string $crie = "choutttt !!!";
+    public int $vie = 100;
 }
