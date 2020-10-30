@@ -2,7 +2,8 @@
     /**
      * @class Personage
      */
-    require 'Guerrier.php';       
+    require 'Guerrier.php';
+    include_once __DIR__. "/../Entity/Connexion.php";       
     class Personnage {
         
         
@@ -17,6 +18,19 @@
                             
                         
         }
+/*
+    // Conexion à la base de donnée et rêquetes
+    
+    $pdo = Connexion::connect();
+    $query = prepare("SELECT * FROM jeux"); 
+    $query->execute();
+
+    /* Récupération de toutes les lignes d'un jeu de résultats 
+    print("Récupération de toutes les lignes d'un jeu de résultats :\n");
+    $result = $query->fetchAll();
+    print_r($query);   */
+
+
         
         
 
