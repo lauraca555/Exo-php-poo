@@ -1,9 +1,9 @@
 <?php 
-class Guerrier  
+class Guerrier  extends Tribu
 {
     
     public string $famille = "Guerrier";
-    public string $crie = "This is the way !";
+    public string $crie = "Geronimo";
     public int $vie = 200;
 }
         

@@ -1,7 +1,10 @@
-<?php class Archer extends Personnage 
+<?php 
+class Archer extends Tribu 
 {
-    public int $vie = 200;
     public string $famille = "Archer";
+    public string $crie = "Toma flecha !";
+    public int $vie = 200;
+    
 
     
    

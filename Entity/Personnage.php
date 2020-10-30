@@ -2,8 +2,8 @@
     /**
      * @class Personage
      */
-    require 'Guerrier.php';
-    include_once __DIR__. "/../Entity/Connexion.php";       
+     
+
     class Personnage {
         
         
@@ -11,13 +11,33 @@
         public object $famille;
         
               
-        public function __construct(string $nom, object $famille)
+        public function __construct(string $nom, string $famille)
         {
-            $this-> nom = $nom; 
-            $this->famille = new Voleur;  
+            $this->nom = $nom;
+            
+            /*if ($famille == "Guerrier"):
+                $famille = new $famille;
+                $this->famille = $famille;
+            else : $this->famille = new Guerrier;
+
+            endif;*/
+
+            switch($famille){
+                case "Guerrier":
+                    $this->famille = new Guerrier;
+                    break; 
+                case "Archer":
+                    $this->famille = new Archer;
+                    break; 
+                case "Voleur":
+                    $this->famille = new Voleur;
+                    break;          
+            }   
                             
                         
         }
+
+        
 /*
     // Conexion à la base de donnée et rêquetes
     

@@ -1,24 +1,22 @@
 <?php 
+function my_autoload($class){
+    if(preg_match('/\A\w+\Z/', $class)){
+        include 'Entity/'.$class.'.php';
+    }    
+}
+spl_autoload_register('my_autoload');
 
-include_once __DIR__. "/../Entity/Voleur.php";
-include_once __DIR__. "/../Entity/Personnage.php";
-//include_once __DIR__. "/../Entity/Connexion.php";
-       
 
-
-
-
-$voleur = new Voleur();
-$personnage1 = new Personnage("Aragon", $voleur); 
+$personnage1 = new Personnage("Aragon", "Archer"); 
 var_dump($personnage1);
 
 // Conexion à la base de donnée et rêquetes
-    
+/*    
 $pdo = Connexion::connect();
 $query = $pdo->query("SELECT * FROM jeux");
 if ($query){
     $users = $query->fetchAll();}
-var_dump($users);    
+var_dump($users);   */ 
 
 
 
